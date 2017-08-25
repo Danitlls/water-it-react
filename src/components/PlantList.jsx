@@ -8,10 +8,9 @@ function PlantList(props){
   return (
     <div>
       <h4>Here should be the list, starts with two hardcoded elements:</h4>
-      <Plant />
-      <hr/>
+      <Plant/><hr/>
       {props.plantList.map((plant, index) =>
-        <Plant name={props.name} key={index}/>
+        <Plant name={plant.name} waterSchedule={plant.waterSchedule} key={index} />
       )}
     </div>
   );
