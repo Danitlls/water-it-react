@@ -6,6 +6,7 @@ class NewPlantForm extends React.Component {
 
   constructor(props) {
     super(props);
+    this.state = { value: ''};
     this.handleNewPlantFormSubmission = this.handleNewPlantFormSubmission.bind(this);
   }
 
@@ -40,7 +41,6 @@ class NewPlantForm extends React.Component {
 
 NewPlantForm.propTypes = {
   onNewPlantCreation: PropTypes.func
-
 };
 
 export default NewPlantForm;

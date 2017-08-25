@@ -8,9 +8,18 @@ class NurseryControl extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-  formShow: true
-};
+  formShowing: false};
   }
+
+hideForm(){
+  this.setState({
+    formShowing: false
+  });
+}
+handleDisplayingNewTicketForm(){
+  console.log("New ticket button was clicked!");
+  this.setState({formShowing: true});
+}
 
   render(){
     return (

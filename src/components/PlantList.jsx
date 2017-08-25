@@ -4,8 +4,11 @@ import Plant from './Plant';
 import PropTypes from 'prop-types';
 
 function PlantList(props){
+    console.log(props)
   return (
     <div>
+      <h4>Here should be the list, witch is empty</h4>
+
       <hr/>
       {props.plantList.map((plant, index) =>
         <Plant name={plant.name}
@@ -14,6 +17,7 @@ function PlantList(props){
       )}
     </div>
   );
+
 }
 
 PlantList.propTypes = {
