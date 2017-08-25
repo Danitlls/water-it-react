@@ -82,7 +82,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template:'template.ejs',
       appMountId: 'react-app-root',
-      title: 'React Boilerplate', //Title for webpage
+      title: 'Water It', 
       filename: resolve(__dirname, "build", "index.html"),
     }),
   ]
