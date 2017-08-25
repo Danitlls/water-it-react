@@ -7,13 +7,11 @@ function PlantList(props){
     console.log(props)
   return (
     <div>
-      <h4>Here should be the list, witch is empty</h4>
-
+      <h4>Here should be the list, starts with two hardcoded elements:</h4>
+      <Plant />
       <hr/>
       {props.plantList.map((plant, index) =>
-        <Plant name={plant.name}
-
-          key={index}/>
+        <Plant name={props.name} key={index}/>
       )}
     </div>
   );

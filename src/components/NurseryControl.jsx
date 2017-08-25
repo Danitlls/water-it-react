@@ -1,4 +1,3 @@
-
 import React from 'react';
 import NewPlantForm from './NewPlantForm';
 import PropTypes from 'prop-types';
@@ -7,29 +6,23 @@ import PropTypes from 'prop-types';
 class NurseryControl extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-  formShowing: false};
+    this.state = {formVisibleOnPage: false};
+    this.handleDisplayingNewPlantForm = this.handleDisplayingNewPlantForm.bind(this);
   }
 
-hideForm(){
-  this.setState({
-    formShowing: false
-  });
-}
-handleDisplayingNewTicketForm(){
-  console.log("New ticket button was clicked!");
-  this.setState({formShowing: true});
-}
+  handleDisplayingNewPlantForm(event){
+     console.log("New Plant button was clicked!");
+     this.setState({formVisibleOnPage: true});
+   }
 
   render(){
     return (
       <div>
-          <section>
-            <NewPlantForm
-              onNewPlantCreation={this.props.onNewPlantCreation}/>
-          </section>
-        </div>
-
+        <button  onClick={this.handleDisplayingNewPlantForm}>Want to add new plant?</button>
+        <section>
+          <NewPlantForm />
+        </section>
+      </div>
     );
   }
 }
