@@ -1,5 +1,5 @@
 import React from 'react';
-import PlantModel from '../models/plant.js';
+import PlantModel from '../models/plant';
 import PropTypes from 'prop-types';
 
 class NewPlantForm extends React.Component {
@@ -12,7 +12,8 @@ class NewPlantForm extends React.Component {
   handleNewPlantFormSubmission(event) {
     event.preventDefault();
     const { _name, _waterSchedule } = this.refs;
-    var newPlant = new PlantModel(_name.value, waterSchedule.value);
+    let newPlant = new PlantModel(_name.value , _waterSchedule.value);
+
     this.props.onNewPlantCreation(newPlant);
     console.log(newPlant)
   }

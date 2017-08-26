@@ -1,7 +1,7 @@
 import React from 'react';
 import PlantList from './PlantList';
 import NewPlantForm from './NewPlantForm';
-import PlantModel from '../models/plant.js';
+import PlantModel from '../models/plant';
 
 
 class Nursery extends React.Component{

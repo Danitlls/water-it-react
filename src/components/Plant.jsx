@@ -1,5 +1,5 @@
 import React from 'react';
-import PlantModel from '../models/plant.js';
+import PlantModel from '../models/plant';
 import PropTypes from 'prop-types';
 
 
@@ -11,7 +11,7 @@ function Plant(props) {
       <button>Watered it!</button>
       <button>Remove</button>
     </div>
-  )
+  );
 }
 
 Plant.propTypes = {
